@@ -1,21 +1,20 @@
 ****************************************
 TO write better README https://www.udacity.com/course/writing-readmes--ud777
 ##I Hope to enjoy and Feedback
-
+~~~~~~~~
 Schema design: star schema 
-
 ------Fact table: songplays :: records in event data associated with song plays i.e. records with page NextSong
 
 --with 4  Dimension tables: 
 -----users, songs, artists, time.
+~~~~~~~~
 
------*users   :: users in the app
-
------*songs   :: songs in music database
-
------*artists :: artists in music database
-
------*time    :: timestamps of records in songplays broken down into specific units
+|              |                                                                       |
+|-------------:|-----------------------------------------------------------------------|
+|      users   | users in the app                                                      |
+|      songs   | songs in music database                                               |
+|      artists | artists in music database                                             |
+|      time    | timestamps of records in songplays broken down into specific units    | 
 
 *********************************************
 *********************************************
@@ -39,7 +38,8 @@ Copy data to staging tables and insert into star schema fact and dimension table
 
 ~~~~//create_tables.py      
 Copy JSON data from S3 to Redshift staging tables
-Insert data from staging tables to star schema fact and dimension tables 
+Insert data from staging tables to star schema fact and dimension tables
+
 ********
 ********
 Run scripts::::
@@ -49,14 +49,17 @@ Choose DB/DB_PASSWORD in dhw.cfg.
 \\\\\\\\\\\
 OVER aws website
 **Create IAM role, Redshift cluster, and IAM user**
-Create a new IAM user in your AWS account
-Give it AdministratorAccess and Attach policies
-Use access key and secret key to create clients for EC2, S3, IAM, and Redshift.
-Create an IAM Role that makes Redshift able to access S3 bucket (ReadOnly)
-Create a RedShift Cluster and get the DWH_ENDPOIN(Host address) and DWH_ROLE_ARN and fill the config file.
-Create in redshift cluster submenu networks and security settings 
+/Create a new IAM user in your AWS account
+/Give it AdministratorAccess and Attach policies
+/Use access key and secret key to create clients for EC2, S3, IAM, and Redshift.
+/Create an IAM Role that makes Redshift able to access S3 bucket (ReadOnly)
+/Create a RedShift Cluster and get the DWH_ENDPOIN(Host address) and DWH_ROLE_ARN and fill the config file.
+/Create in redshift cluster submenu networks and security settings 
 ---press publically accessiable enabled(or check mark)
-![This is an image](https://github.com/M7FAWZY/udacity-data-engineer-data-warehouse-Project-3/blob/e2977a616a6f9fdc3be310bc08a04c5c1777e2f8/5d395536-8f31-4ce4-aa1c-06133a7dbb80-mobile.png)
+~~~~~~
+![This is an image](https://github.com/M7FAWZY/udacity-data-engineer-data-warehouse-Project-3/blob/8bdf86bdb4559cb1a4fe3b4064b66459b49d6cf8/5d395536-8f31-4ce4-aa1c-06133a7dbb80-mobile.png)
+~~~~~~
+
 Stage data
 $ python create_cluster.py
 \\\\\\\\\\\\\
@@ -74,7 +77,11 @@ Delete IAM role and Redshift cluster
 $ python create_cluster.py --delete
 \\\\\\\\\\\\\\\
 *********
+GO to aws website RedShift cluster 
+
 *********
+~~~~~~
+~~~~~~
 STEPS to implement 
 1- Complete the sql_queries.py script with
 Drop all tables
