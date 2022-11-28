@@ -54,7 +54,9 @@ Give it AdministratorAccess and Attach policies
 Use access key and secret key to create clients for EC2, S3, IAM, and Redshift.
 Create an IAM Role that makes Redshift able to access S3 bucket (ReadOnly)
 Create a RedShift Cluster and get the DWH_ENDPOIN(Host address) and DWH_ROLE_ARN and fill the config file.
-
+Create in redshift cluster submenu networks and security settings 
+---press publically accessiable enabled(or check mark)
+![This is an image](https://github.com/M7FAWZY/udacity-data-engineer-data-warehouse-Project-3/blob/e2977a616a6f9fdc3be310bc08a04c5c1777e2f8/5d395536-8f31-4ce4-aa1c-06133a7dbb80-mobile.png)
 Stage data
 $ python create_cluster.py
 \\\\\\\\\\\\\
@@ -116,6 +118,8 @@ ARN
 9- Create ReadMe.md and zip all the scripts (EXCEPTION: clear dwh.cfg file)
 
 10- Submit the project.
+
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
 ##############
 #BRAVO #
