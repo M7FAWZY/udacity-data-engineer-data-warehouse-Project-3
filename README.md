@@ -20,7 +20,7 @@ Schema design: star schema
 *********************************************
 *********************************************
 Files
-
+~~~~
 ~~~~//sql_queries.py
 Creating and dropping staging and star schema tables
 , partitioned by CREATE, DROP, COPY and INSERT statement.
