@@ -39,9 +39,10 @@ Copy data to staging tables and insert into star schema fact and dimension table
 ~~~~//create_tables.py      
 Copy JSON data from S3 to Redshift staging tables
 Insert data from staging tables to star schema fact and dimension tables
-
+~~~~~~~~~~~~~
 ********
 ********
+~~~~~~~~~~~~
 Run scripts::::
 Set environment variables in [AWS] in dwh.cfg AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
 set [CLUSTER] in dhw.cfg
@@ -76,6 +77,9 @@ $ python etl.py
 SHOW queries in RedShift Cluster 
 1-GO to cluster press on it
 2-Submenu Query and play queries
+~~~~~~~~
+https://docs.aws.amazon.com/redshift/latest/gsg/console.html
+~~~~~~~~
 \\\\\\\\\\\\\\
 Delete IAM role and Redshift cluster
 $ python create_cluster.py --delete
