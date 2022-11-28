@@ -1,3 +1,6 @@
+#IF you are like to link it by code
+#BUT it's much easier to USE aws website
+
 import argparse
 import configparser
 import json
