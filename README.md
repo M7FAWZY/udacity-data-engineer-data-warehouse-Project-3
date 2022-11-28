@@ -20,29 +20,33 @@ Schema design: star schema
 *********************************************
 Files
 ~~~~
-~~~~//sql_queries.py
+-----------//sql_queries.py
 Creating and dropping staging and star schema tables
 , partitioned by CREATE, DROP, COPY and INSERT statement.
 
 
-~~~~//dwh.cfg 
+----------//dwh.cfg 
 Configure Redshift cluster and data import
 
-~~~~//create_cluster.py
+---------//create_cluster.py
 Create IAM role, Redshift cluster, and allow TCP connection from outside VPC
 Pass --delete flag to delete resources
 create_tables.py Drop and recreate tables   
 
-~~~~//etl.py 
+---------//etl.py 
 Copy data to staging tables and insert into star schema fact and dimension tables
 
-~~~~//create_tables.py      
+-------//create_tables.py      
 Copy JSON data from S3 to Redshift staging tables
 Insert data from staging tables to star schema fact and dimension tables
-~~~~~~~~~~~~~
+~~~~
+
 ********
 ********
-~~~~~~~~~~~~
+
+
+
+~~~~~
 Run scripts::::
 Set environment variables in [AWS] in dwh.cfg AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.
 set [CLUSTER] in dhw.cfg
@@ -57,6 +61,8 @@ OVER aws website
 /Create a RedShift Cluster and get the DWH_ENDPOIN(Host address) and DWH_ROLE_ARN and fill the config file.
 /Create in redshift cluster submenu networks and security settings 
 ---press publically accessiable enabled(or check mark)
+
+
 ~~~~~~
 ![This is an image](https://github.com/M7FAWZY/udacity-data-engineer-data-warehouse-Project-3/blob/8bdf86bdb4559cb1a4fe3b4064b66459b49d6cf8/5d395536-8f31-4ce4-aa1c-06133a7dbb80-mobile.png)
 ~~~~~~
@@ -77,6 +83,7 @@ $ python etl.py
 SHOW queries in RedShift Cluster 
 1-GO to cluster press on it
 2-Submenu Query and play queries
+
 ~~~~~~~~
 https://docs.aws.amazon.com/redshift/latest/gsg/console.html
 ~~~~~~~~
@@ -96,6 +103,7 @@ https://udacity.zendesk.com/hc/en-us/articles/4409515588749-Best-Practices-to-Av
 
 ********
 ********
+
 ~~~~~~~~~~~~~
 STEPS to implement 
 
