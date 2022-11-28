@@ -6,11 +6,11 @@ Schema design: star schema
 ------Fact table: songplays :: records in event data associated with song plays i.e. records with page NextSong
 
 --with 4  Dimension tables: 
------users, songs, artists, time.
------users   :: users in the app
------songs   :: songs in music database
------artists :: artists in music database
------time    :: timestamps of records in songplays broken down into specific units
+-----*users, songs, artists, time.
+-----*users   :: users in the app
+-----*songs   :: songs in music database
+-----*artists :: artists in music database
+-----*time    :: timestamps of records in songplays broken down into specific units
 
 *********************************************
 *********************************************
