@@ -72,17 +72,29 @@ $ python create_tables.py
 \\\\\\\\\\\\\\
 Run ETL pipeline
 $ python etl.py
-\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\
+SHOW queries in RedShift Cluster 
+1-GO to cluster press on it
+2-Submenu Query and play queries
+\\\\\\\\\\\\\\
 Delete IAM role and Redshift cluster
 $ python create_cluster.py --delete
 \\\\\\\\\\\\\\\
 *********
-GO to aws website RedShift cluster 
+~~~~~~~~~
 
-*********
-~~~~~~
-~~~~~~
+AFTER FINISH
+~~~~~~~~~~~~
+GO to aws website RedShift cluster DELETE ALL (RedShift Cluster,EC2,IAM USER,RDS,S3 Bucket )
+and check billing dashboard
+~~~~~~~~~~~~~
+https://udacity.zendesk.com/hc/en-us/articles/4409515588749-Best-Practices-to-Avoid-Unexpected-AWS-Charges
+
+********
+********
+~~~~~~~~~~~~~
 STEPS to implement 
+
 1- Complete the sql_queries.py script with
 Drop all tables
 
@@ -125,9 +137,10 @@ ARN
 9- Create ReadMe.md and zip all the scripts (EXCEPTION: clear dwh.cfg file)
 
 10- Submit the project.
-
+~~~~~~~~~~~~
 https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-
+~~~~~~~~~~~~
 ##############
-#BRAVO #
+#BRAVO #  MFAWZY
 ##############
+~~~~~~~~~~~~~~
